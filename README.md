@@ -1,5 +1,18 @@
 # Contribution Workflow
 
+## Table of Contents
+
+* [Overview](#overview)
+* [Central Repository](#central-repository)
+* [Fork-and-Pull](#fork-and-pull)
+* [TLDR](#tldr)
+
+## Overview
+
+This document details common git contribution workflows used when working with the CRC on GitHub.
+
+[Return to Top](#contribution-workflow)
+
 ## Central Repository
 
 When following the Central Repository workflow:
@@ -89,6 +102,8 @@ git branch -D working-branch
 
 git pull
 ```
+
+[Return to Top](#contribution-workflow)
 
 ## Fork-and-Pull
 
@@ -180,3 +195,25 @@ git branch -D working-branch
 git pull upstream main
 git push origin main
 ```
+
+[Return to Top](#contribution-workflow)
+
+## TLDR
+
+The following git alias remotely executes the `tldr.sh` script in this repository to output a concise reference for the contribution workflows.
+
+```shell
+###
+### Usage: git crc [central|fork]
+###
+
+# Add the alias to ~/.gitconfig
+
+git config --global alias.crc '!sh -c "curl -sSL https://raw.githubusercontent.com/rice-crc/contribution-workflow/main/tldr.sh | sh -s $1" -'
+
+# Remove the alias
+
+git config --global --unset alias.crc
+```
+
+[Return to Top](#contribution-workflow)
