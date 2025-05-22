@@ -209,11 +209,11 @@ The following git alias remotely executes the `tldr.sh` script in this repositor
 
 # Add the alias to ~/.gitconfig
 
-git config --global alias.crc '!sh -c "curl -sSL https://raw.githubusercontent.com/rice-crc/contribution-workflow/main/tldr.sh | sh -s $1" -'
+git config --global alias.workflow '!sh -c "curl -sSL https://raw.githubusercontent.com/rice-crc/contribution-workflow/main/tldr.sh | sh -s $1" -'
 
 # Remove the alias
 
-git config --global --unset alias.crc
+git config --global --unset alias.workflow
 ```
 
 [Return to Top](#contribution-workflow)
