@@ -59,10 +59,18 @@ See https://github.com/rice-crc/contribution-workflow.
 EOF
 }
 
-if [ $1 == "central" ]; then
+help() {
+    cat <<EOF
+Usage: git workflow [central|fork]
+EOF
+}
+
+if [ $# -eq 0 ]; then
+    help
+elif [ $1 == "central" ]; then
     central
 elif [ $1 == "fork" ]; then
     fork
 else
-    echo "Invalid option. Usage: git workflow [central|fork]"
+    help
 fi
